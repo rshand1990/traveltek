@@ -4,6 +4,7 @@ const formatFlightData = (flightData, flightSegments) => {
     return flightData.map(flight => {
         const matchingFlights = flightSegments.filter(segment => segment.flightid === flight.id);
 
+        // TODO pick the data we return to lessen the payload to the client
         return {
             ...flight,
             stops: matchingFlights.length,

@@ -4,4 +4,8 @@ Initial install:
 
 To start the API/service layer:
 
-`npm start service`
+`npm run service`
+
+To start the frontend:
+
+`npm run front`

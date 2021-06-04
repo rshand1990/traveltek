@@ -1,4 +1,6 @@
 import express from 'express';
+import cors from 'cors';
+
 import fetchFlightData from './fetch_flight_data.js';
 import { mostPopularDestinations } from './flight_statistics.js';
 import { filterAMFlights, filterUniqueFlightNumbers } from './filter_flight_data.js';
@@ -6,6 +8,8 @@ import { filterAMFlights, filterUniqueFlightNumbers } from './filter_flight_data
 const port = process.env.PORT || 3000;
 
 const server = express();
+
+server.use(cors());
 
 server.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
